@@ -1,0 +1,70 @@
+<style>
+.myTable {
+border-collapse: collapse;
+border-spacing: 0;
+}
+.myTable thead th {
+background-color: #c4d600;
+color: #F4F4F4;
+padding: 10px;
+text-align: left;
+}
+.myTable tbody td {
+border: solid 1px #DDEEEE;
+color: #333;
+padding: 10px;
+}
+.myTable-rounded thead th {
+background-color: #c4d600;
+color: 005744;
+}
+.myTable-rounded thead th:first-child {
+border-radius: 5px 0 0 0;
+}
+.myTable-rounded thead th:last-child {
+border-radius: 0 5px 0 0;
+}
+.myTable-rounded tbody td {
+border: none;
+border-top: solid 1px #c4d600;
+border-left: solid 1px #c4d600;
+border-right: solid 1px #c4d600;
+background-color: #F4F4F4;
+}
+.myTable-rounded tbody tr:last-child td:first-child {
+border-radius: 0 0 0 5px;
+}
+.myTable-rounded tbody tr:last-child td:last-child {
+border-radius: 0 0 5px 0;
+}
+</style>
+<table class="myTable myTable-rounded">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Amount</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>A</td>
+			<td>$4</td>
+		</tr>
+		<tr>
+			<td>B</td>
+			<td>$7</td>
+		</tr>
+		<tr>
+			<td>C</td>
+			<td>$2</td>
+		</tr>
+		<tr>
+			<td>D</td>
+			<td>$7</td>
+		</tr>
+		<tr>
+			<td>E</td>
+			<td>$3</td>
+		</tr>
+	</tbody>
+</table>
