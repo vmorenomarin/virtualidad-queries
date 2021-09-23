@@ -1,129 +1,159 @@
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="d-flex flex-row m-2 justify-content-between align-items-center"
+      >
+        <div id="estado-solicitud">
+          <div><b>Estado de la solicitud:</b> [[estado]]</div>
+          <div class="mb-2"><b>Asignada a: </b> [[asignada]]</div>
+        </div>
+        <div>
+          <a
+            href="https://www.comfenalcoantioquia.edu.co/mod/page/view.php?id=263526"
+            class="btn btn-primary"
+          >
+            <i class="fa fa-home"></i> Volver al Pánel de Servicios</a
+          >
+        </div>
+      </div>
 
-    </head>
-    <body>
-        <div class="container">
-            <div class="alert alert-primary" role="alert">
-                Seleccione la solicitud que requiere hacer.
-            </div>
-            <div id="solicitudes">
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle"
-                        type="button"
-                        id="dropdownMenuButton" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Solicitudes
-                    </button>
-                    <div class="dropdown-menu"
-                        aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#" data-toggle="collapse"
-                            data-target="#curso">Espacio Virtual</a>
-                        <a class="dropdown-item" href="#" data-toggle="collapse"
-                            data-target="#moodle">Matrícula Moodle</a>
-                        <a class="dropdown-item" href="#" data-toggle="collapse"
-                            data-target="#teams">Cuenta Teams</a>
-                    </div>
-                </div>
-                <div class="collapse show" id="curso"
-                    data-parent="#solicitudes">
-                    <div class="card">
-                        <div class="card-header"><h3>Creación espacio Moodle</h3></div>
-                        <div class="card-body">
-                            <h4>Seleccione el tipo de oferta:</h4>
-                            <div>
-                                [[tipo_oferta]]
-                            </div>
-                            <div>Si ha seleccionado la opción <i>Ofrecido a una empresa</i>, escriba el nombre de ella: [[nombre_empresa]]</div>
-                            <h4>Seleccione el curso:</h4>
-                            <div>
-                                [[curso]]
-                            </div>
-                            <h4>Indique la región o regiones donde se ofrecerá el curso:</h4>
-                            <div>
-                                [[region]]
-                            </div>
-                            <h4>Escriba la semilla a clonar</h4>
-                            <small id="dilHelp" class="form-text text-muted">
-                                Escriba el nombre corto de la semilla; por ejemplo: <i>DiplomadoGestionGerenciaProyectosANorteFOSFEC_17082021_G2</i>. Deje vacío si no hay semilla.
-                            </small>
-                            <div>
-                                [[semilla]]
-                            </div>
-                           
-                            <h4>Fecha de inicio y finalización</h4>
-                            <div>
-                                [[f_inicio]]
-                            </div>
-                            <div>
-                                [[f_fin]]
-                            </div>
-                            <h4>Datos del docente</h4>
-                            <div id="Datos_docente">
-                                <div class="mb-1">
-                                    Nombres y apellidos
-                                    <small id="namelHelp" class="form-text text-muted">
-                                        Escriba nombres y apellidos en mayúsculas.
-                                    </small>
-                                    <div>Nombres: [[nombre_docente]]</div>
-                                    <div>Apellidos: [[apellido_docente]]</div>
-                                </div>
-                                <div class="mb-1">
-                                    <div>Número documento de identidad:
-                                    <small id="dilHelp" class="form-text text-muted">
-                                        Sin espacios, ni puntos ni comas.
-                                    </small>
-                                    [[di_docente]]</div>
-                                </div>
-                                <div class="mb-1">
-                                    <div>Dirección correo electrónico:
-                                    <small id="emailHelp" class="form-text text-muted">
-                                        Escriba la cuenta educativa de Comfenalco si ya se la ha asignado una. Verifique que no haya espacios.
-                                    </small>
-                                    [[email_docente]]</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="collapse" id="moodle" data-parent="#solicitudes">
-                    <div class="card">
-                        <div class="card-header"><h3>Matrícula usuarios Moodle</h3></div>
-                        <div class="card-body">
-                            <div>
-                                En caso de necesitarlo, descargue el formato para inscribir usuarios. 
-                                <a href="https://www.comfenalcoantioquia.edu.co/pluginfile.php/562625/mod_folder/content/0/formato_matricula_moodle.xlsx?forcedownload=1" class="btn btn-warning">Formato</a>
-                            </div>
-                            <div>
-                                Suba el archivo con los usuarios a matricular:
-                                [[Archivo_MM]]
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div id="espacio moodle" class="card bg-light p-3 shadow-lg">
+        <div id="servicio">
+          <h4>Seleccione la regional desde donde hace la solicitud:</h4>
+          <div>[[regionales]]</div>
+          <h4>Seleccione el tipo de oferta:</h4>
+          <div>[[tipo_oferta]]</div>
+          <div id="nombre-empresa">
+            Escriba el nombre de la empresa: [[nombre_empresa]]
+          </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
+        <hr />
 
+        <div id="curso">
+          <h4>Escriba el nombre del curso:</h4>
+          <small id="cursoHelp" class="form-text text-muted">
+            Copie y pegue desde el portafolio el nombre del material
+            correspondiente a este curso.
+          </small>
+          <div>
+            <div>[[curso_portafolio]]</div>
+            <div class="m-2">
+              Consecutivo para el grupo (si aplica): [[num_grupo]]
+            </div>
+            <div class="mt-2">
+              <h4>¿Compartirá el servicio con otras regionales?</h4>
+              <div id="radio-multirregion">[[multirregion]]</div>
+              <div id="multirregion">
+                <h4>
+                  Seleccione la regional o regionales donde se ofrecerá el
+                  curso:
+                </h4>
+                <div>[[region]]</div>
+              </div>
+            </div>
+            <h4>Copie y pegue el nombre corto del curso semilla a duplicar</h4>
+            <small id="semillaHelp" class="form-text text-muted"
+              >Ejemplo: <i>DiplomadoBDMacrosExcelFOSFEC_02072021_G1 </i></small
+            >
+            <div class="mb-2">[[semilla]]</div>
+            <h4>Fecha de inicio y finalización</h4>
+            <div>Inicio: [[f_inicio]]<br /></div>
+            <div>Finalización: [[f_fin]]</div>
+          </div>
 
-    </body>
+          <hr />
+
+          <div id="docente">
+            <h4>Datos del docente</h4>
+            <div id="Datos_docente">
+              <div>
+                Nombres y apellidos
+                <small id="nameHelp" class="form-text text-muted">
+                  Escriba nombres y apellidos en mayúsculas.
+                </small>
+                <div>Nombres: [[nombre_docente]]</div>
+                <div>Apellidos: [[apellido_docente]]</div>
+              </div>
+              <div>
+                <div>
+                  Número documento de identidad:
+                  <small id="diHelp" class="form-text text-muted">
+                    Sin espacios, ni puntos ni comas.
+                  </small>
+                  [[di_docente]]
+                </div>
+              </div>
+              <div>
+                <div>
+                  Dirección correo electrónico:
+                  <small id="emailHelp" class="form-text text-muted">
+                    Escriba la cuenta educativa de Comfenalco si ya se le ha
+                    asignado una. Verifique que no haya espacios.
+                  </small>
+                  [[email_docente]]
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div id="matricula">
+            <h4>Matricular usuarios</h4>
+            ¿Desea matricular de una vez los estudiantes en este espacio (Sí) o
+            lo solicitará después (No)?
+            <div id="radio-subirusuarios">[[matricula]]</div>
+            <div id="subir-usuarios">
+              <div>
+                En caso de necesitarlo, descargue el formato para inscribir
+                usuarios.
+                <a
+                  href="https://www.comfenalcoantioquia.edu.co/pluginfile.php/562625/mod_folder/content/0/formato_matricula_moodle.xlsx?forcedownload=1"
+                  class="btn btn-success"
+                  >Descargar Formato</a
+                >
+              </div>
+              <h4>Subir usuarios</h4>
+              Suba el archivo con los usuarios a matricular: [[Archivo_MM]]
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/hideShow.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
